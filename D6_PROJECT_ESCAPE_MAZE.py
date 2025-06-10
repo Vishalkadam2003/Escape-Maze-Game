@@ -6,8 +6,8 @@ def generate_maze(rows, cols):
     for i in range(1, rows - 1):
         for j in range(1, cols - 1):
             maze[i][j] = ' ' if random.random() > 0.3 else '#'
-    maze[1][1] = 'P'  # Player's starting position
-    maze[rows - 2][cols - 2] = 'E'  # Exit position
+    maze[1][1] = 'P'  
+    maze[rows - 2][cols - 2] = 'E' 
     return maze
 
 
@@ -27,7 +27,7 @@ def move_player(maze, direction, player_pos):
         y -= 1
     elif direction == 'd' and maze[x][y + 1] != '#':
         y += 1
-    maze[x][y] = 'P'  # Update new position
+    maze[x][y] = 'P'  
     return (x, y)
 
 
